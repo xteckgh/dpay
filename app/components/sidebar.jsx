@@ -26,7 +26,7 @@ const Sidebar = () => {
       <div className=" text-xl mb-8 font-bold" >
         <h2>Manage</h2>
       </div>
-      <nav className="text-20">
+      <nav className="mb-10">
         <ul className="space-y-1">
 
           <li className="flex items-start ml-2 text-20 cursor-pointer hover:text-blue-400">
@@ -76,23 +76,18 @@ const Sidebar = () => {
 
 
       </nav>
-     
-      <div className=" mt-10 absolute  text-sm">
-      <hr className="border-white w-full mb-1" />
-        
+      <hr className="w-full border-white  mb-1" />
+      <div className=" text-sm">
         <Link href="/login">
-          <span className="flex text-white  py-2 " aria-label="Logout"> 
+          <span className="flex items-center text-white  py-2 " aria-label="Logout"> 
             <Image width={40}
           height={40}  src={logout} alt="logout " />
             Logout
           </span>
         </Link>
-        <hr className="border-white w-full mt-1" />
         
       </div>
-    
-      
-
+      <hr className="border-white w-full mt-1" />
     </div>
     
   );
