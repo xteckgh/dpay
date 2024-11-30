@@ -2,11 +2,17 @@ import { FaWallet, FaUserFriends, FaRegListAlt, FaCog } from "react-icons/fa";
 import Image from "next/image";
 import Logo from "../assets/logo.png";
 import Link from "next/link";
+import transaction from "../assets/transaction.png"
+import manualrestion from "../assets/manualregistion.png"
+import logout from "../assets/logout.png"
+import paydues from "../assets/paydue.png"
+import dashboard from "../assets/dashboard.png"
+import settings from "../assets/settings.png"
 
 
 const Sidebar = () => {
   return (
-    <div className="bg-blue-800 text-white h-screen w-60 p-5">
+    <div className="bg-blue-800 text-sm text-white h-screen w-60 p-5">
       <div className="flex items-center mt-10 mb-8">
         <Image
           width={40}
@@ -20,69 +26,75 @@ const Sidebar = () => {
       <div className=" text-xl mb-8 font-bold" >
         <h2>Manage</h2>
       </div>
-      <nav>
-        <ul className="space-y-2">
+      <nav className="text-20">
+        <ul className="space-y-1">
 
-          <li className="flex items-center space-x-3 cursor-pointer hover:text-blue-400">
-            <Link className="flex items-center " href="/dashboard">
-              <FaWallet />
-              <span className="p-3">Dashboard</span>
+          <li className="flex items-start ml-2 text-20 cursor-pointer hover:text-blue-400">
+            <Link className="flex items-center" href="/dashboard">
+              <Image width={30}
+          height={30}  src={dashboard} alt="dashboard" />
+              <span className="p-3 ">Dashboard</span>
             </Link>
           </li>
 
-          <li className="flex items-center space-x-3  cursor-pointer hover:text-blue-400">
-            <Link className="flex items-center " href="/pay">
-              <FaRegListAlt />
+          <li className="flex items-center cursor-pointer hover:text-blue-400">
+            <Link className="flex items-center" href="/pay">
+              <Image width={40}
+          height={40}  src={paydues} alt="pay dues" />
               <span className="p-3">Pay Dues</span>
             </Link>
           </li>
-          <li className="flex items-center space-x-3  cursor-pointer hover:text-blue-400">
-            <Link className="flex items-center " href="/cryptopay">
-              <FaRegListAlt />
+          <li className="flex items-center cursor-pointer hover:text-blue-400">
+            <Link className="flex items-center" href="/cryptopay">
+              <Image width={40}
+          height={40}  src={paydues} alt="pay with crypto" />
               <span className="p-3">Pay in Crypto</span>
             </Link>
           </li>
-          <li className="flex items-center space-x-3  cursor-pointer hover:text-blue-400">
-            <Link className="flex items-center " href="/transactions">
-              <FaRegListAlt />
+          <li className="flex items-center cursor-pointer hover:text-blue-400">
+            <Link className="flex items-center" href="/transactions">
+              <Image width={40}
+          height={40}  src={transaction} alt="transactions" />
               <span className="p-3">Transactions</span>
             </Link>
           </li>
 
-          <li className="flex items-center space-x-3 cursor-pointer hover:text-blue-400">
-            <Link className="flex items-center " href="/Register">
-              <FaUserFriends />
+          <li className="flex items-center cursor-pointer hover:text-blue-400">
+            <Link className="flex items-center" href="/Register">
+              <Image width={40}
+          height={40}  src={manualrestion} alt="manual registration" />
               <span className="p-3">Manual Registration</span>
             </Link>
-
           </li>
-          <li className="flex items-center space-x-3 cursor-pointer hover:text-blue-400">
-            <Link className="flex items-center " href="/Settings">
-              <FaCog />
-              <span className="p-3">Settings</span>
+          <li className="flex items-center cursor-pointer hover:text-blue-400">
+            <Link className="flex items-center" href="/Settings">
+            <Image  src={settings}  alt="settings" width={40 } height={40}/>
+              <span className=" p-3">Settings</span>
             </Link>
           </li>
         </ul>
 
 
       </nav>
-      <div className="flex items-start justify-start absolute bottom-10 text-sm">
+     
+      <div className=" mt-10 absolute  text-sm">
+      <hr className="border-white w-full mb-1" />
+        
         <Link href="/login">
-
-
-          <button className="flex text-white px-8 py-4 rounded hover:bg-blue-600 transition duration-200" aria-label="Logout">
-            <span className="mr-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
-              </svg>
-            </span>
-
+          <span className="flex text-white  py-2 " aria-label="Logout"> 
+            <Image width={40}
+          height={40}  src={logout} alt="logout " />
             Logout
-          </button>
+          </span>
         </Link>
+        <hr className="border-white w-full mt-1" />
+        
       </div>
+    
+      
 
     </div>
+    
   );
 };
 

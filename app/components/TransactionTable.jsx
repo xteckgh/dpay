@@ -27,20 +27,13 @@ const TransactionTable = () => {
     },
   ];
 
-  // const handlePrintReceipt = () => {
-  //   const content = transactions.map(transaction => 
-  //     `ID: ${transaction.id}, Name: ${transaction.name}, Account: ${transaction.account}, Balance: ${transaction.balance}, Date: ${transaction.date}`
-  //   ).join('\n');
-  //   printPDF(content);
-  // };
+
 
   return <>
     <div className="p-0">
       <div className="mb-4  flex items-center justify-between">
         <div className=" mt-6" >
-          <select className="mr-2 p-4 rounded bg-gray-200 px-4 py-2 text-sm ">
-            <option value=""> Print all selected</option>
-          </select>
+          
           <button className="rounded bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-700" >
             Print Receipt
           </button>
