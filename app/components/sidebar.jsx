@@ -8,9 +8,11 @@ import logout from "../assets/logout.png"
 import paydues from "../assets/paydue.png"
 import dashboard from "../assets/dashboard.png"
 import settings from "../assets/settings.png"
+import cyptopay from "../assets/cryptopayy.png"
 
 
 const Sidebar = () => {
+  
   return (
     <div className="bg-blue-800 text-sm text-white h-screen w-60 p-5">
       <div className="flex items-center mt-10 mb-8">
@@ -46,8 +48,7 @@ const Sidebar = () => {
           </li>
           <li className="flex items-center cursor-pointer hover:text-blue-400">
             <Link className="flex items-center" href="/cryptopay">
-              <Image width={40}
-          height={40}  src={paydues} alt="pay with crypto" />
+              <Image style={{ filter: 'invert(1)' }} className="text-white" width={40} height={40} src={cyptopay} alt="pay with crypto" />
               <span className="p-3">Pay in Crypto</span>
             </Link>
           </li>
